@@ -1,28 +1,34 @@
 # ts-scraper
 
-TypeScript + Node.js + axios + cheerio を使用した
-スクレイピング学習用プロジェクト。
+TypeScript + Node.js の **fetch API** でHTMLを取得し、cheerioでDOM解析して要素を抽出する
+スクレイピング学習用プロジェクトです。
 
 ---
 
 ## 技術スタック
 
-- Node.js
+- Node.js（v18+ 推奨：fetchが標準で使える）
 - TypeScript
-- axios
-- cheerio
+- fetch API
+- cheerio（DOM解析に使用）
 
 ---
 
-## 概要
+## できること
 
-以下の流れでデータを取得します。
+- 指定URLからHTMLを取得（fetch）
+- HTMLを解析して要素を抽出（cheerio など）
+- 抽出結果を整形して表示（console.log）
 
-HTTPリクエスト  
+---
+
+## 処理フロー
+
+HTTPリクエスト（fetch）  
 ↓  
-HTML取得  
+HTML取得（response.text）  
 ↓  
-DOM解析  
+DOM解析（cheerio）  
 ↓  
 要素抽出  
 ↓  
@@ -34,4 +40,3 @@ DOM解析
 
 ```bash
 npm install
-npx ts-node index.ts
