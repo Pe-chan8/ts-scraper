@@ -17,8 +17,9 @@ async function main() {
     const text = $(el).text().trim()
     const href = ($(el).attr("href") ?? "").trim()
 
-    // 空は除外（整形の例）
-    if (text && href) links.push({ text, href })
+    if (text && href) {
+      links.push({ text, href })
+    }
   })
 
   console.log(links)
